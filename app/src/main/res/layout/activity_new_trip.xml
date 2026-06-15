@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F9FA">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#1D9E75"
+            android:padding="16dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageButton
+                android:id="@+id/backButton"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@android:drawable/ic_menu_revert"
+                android:tint="#FFFFFF"
+                android:contentDescription="Back"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Trip"
+                android:textSize="20sp"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:layout_marginStart="12dp"/>
+
+        </LinearLayout>
+
+        <!-- Form card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Trip name -->
+            <TextView
+                android:text="Trip Name"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#333333"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/etTripName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="e.g. Goa Trip 2024"
+                android:padding="12dp"
+                android:background="@drawable/input_background"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="20dp"
+                android:inputType="textCapSentences"/>
+
+            <!-- Destination -->
+            <TextView
+                android:text="Destination"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#333333"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/etDestination"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="e.g. Goa, India"
+                android:padding="12dp"
+                android:background="@drawable/input_background"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="20dp"
+                android:inputType="textCapSentences"/>
+
+            <!-- Trip type -->
+            <TextView
+                android:text="Trip Type"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#333333"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="20dp"
+                android:weightSum="4">
+
+                <Button
+                    android:id="@+id/btnTypeRoad"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="🚗 Road"
+                    android:textSize="11sp"
+                    android:layout_marginEnd="4dp"/>
+
+                <Button
+                    android:id="@+id/btnTypeTrek"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="🥾 Trek"
+                    android:textSize="11sp"
+                    android:layout_marginEnd="4dp"/>
+
+                <Button
+                    android:id="@+id/btnTypeCity"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="🏙️ City"
+                    android:textSize="11sp"
+                    android:layout_marginEnd="4dp"/>
+
+                <Button
+                    android:id="@+id/btnTypeBeach"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="🏖️ Beach"
+                    android:textSize="11sp"/>
+
+            </LinearLayout>
+
+            <!-- Color theme -->
+            <TextView
+                android:text="Color Theme"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#333333"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="28dp">
+
+                <ImageButton android:id="@+id/color1" android:layout_width="36dp" android:layout_height="36dp" android:layout_marginEnd="10dp" android:contentDescription="Green"/>
+                <ImageButton android:id="@+id/color2" android:layout_width="36dp" android:layout_height="36dp" android:layout_marginEnd="10dp" android:contentDescription="Blue"/>
+                <ImageButton android:id="@+id/color3" android:layout_width="36dp" android:layout_height="36dp" android:layout_marginEnd="10dp" android:contentDescription="Pink"/>
+                <ImageButton android:id="@+id/color4" android:layout_width="36dp" android:layout_height="36dp" android:layout_marginEnd="10dp" android:contentDescription="Amber"/>
+                <ImageButton android:id="@+id/color5" android:layout_width="36dp" android:layout_height="36dp" android:layout_marginEnd="10dp" android:contentDescription="Purple"/>
+                <ImageButton android:id="@+id/color6" android:layout_width="36dp" android:layout_height="36dp" android:contentDescription="Coral"/>
+
+            </LinearLayout>
+
+            <!-- Start button -->
+            <Button
+                android:id="@+id/btnStartTrip"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="🚀 Start Recording Trip"
+                android:textSize="16sp"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#1D9E75"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

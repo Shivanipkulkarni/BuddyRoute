@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center"
+    android:background="#FFFFFF">
+
+    <TextView
+        android:text="🎤 Voice Note"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#1A1A2E"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:id="@+id/tvVoiceStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tap the mic to start recording"
+        android:textSize="14sp"
+        android:textColor="#888888"
+        android:gravity="center"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- Animated mic button -->
+    <FrameLayout
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="24dp">
+
+        <!-- Pulse ring -->
+        <View
+            android:id="@+id/pulseRing"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/circle_shape"
+            android:alpha="0"
+            android:layout_gravity="center"/>
+
+        <!-- Mic button -->
+        <TextView
+            android:id="@+id/btnMic"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:text="🎤"
+            android:textSize="32sp"
+            android:gravity="center"
+            android:background="@drawable/mic_button_bg"
+            android:layout_gravity="center"/>
+
+    </FrameLayout>
+
+    <!-- Timer -->
+    <TextView
+        android:id="@+id/tvRecordTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00:00"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="#1D9E75"
+        android:visibility="gone"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Max time hint -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Max 60 seconds"
+        android:textSize="12sp"
+        android:textColor="#BBBBBB"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- Action buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/btnCancelVoice"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="6dp"
+            android:text="Cancel"
+            android:backgroundTint="#F0F0F0"
+            android:textColor="#333333"/>
+
+        <Button
+            android:id="@+id/btnSaveVoice"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_marginStart="6dp"
+            android:text="💾 Save"
+            android:backgroundTint="#1D9E75"
+            android:textColor="#FFFFFF"
+            android:enabled="false"/>
+
+    </LinearLayout>
+
+</LinearLayout>

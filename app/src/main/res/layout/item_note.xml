@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="2dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="14dp">
+
+        <!-- Mood + time row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:id="@+id/tvMoodEmoji"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:layout_marginEnd="8dp"/>
+
+            <TextView
+                android:id="@+id/tvNoteTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="11sp"
+                android:textColor="#AAAAAA"/>
+
+        </LinearLayout>
+
+        <!-- Note text -->
+        <TextView
+            android:id="@+id/tvNoteText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="#333333"
+            android:lineSpacingExtra="3dp"/>
+
+        <!-- Photo if exists -->
+        <ImageView
+            android:id="@+id/ivNotePhoto"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="10dp"
+            android:visibility="gone"
+            android:background="@drawable/input_background"/>
+
+    </LinearLayout>
+    <!-- Voice note player -->
+    <LinearLayout
+        android:id="@+id/voiceNoteLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#F0F8F5"
+        android:padding="10dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center_vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/btnPlayVoice"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="▶"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:background="@drawable/mic_button_bg"
+            android:textColor="#FFFFFF"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Voice Note"
+            android:textSize="13sp"
+            android:textColor="#1D9E75"
+            android:textStyle="bold"
+            android:layout_marginStart="10dp"/>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F9FA">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#1D9E75"
+            android:padding="16dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageButton
+                android:id="@+id/backButton"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@android:drawable/ic_menu_revert"
+                android:tint="#FFFFFF"
+                android:contentDescription="Back"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="How BuddyRoute Works"
+                android:textSize="20sp"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:layout_marginStart="12dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Step 1 -->
+            <include layout="@layout/item_help_step"
+                android:id="@+id/step1"/>
+
+            <!-- Step 2 -->
+            <include layout="@layout/item_help_step"
+                android:id="@+id/step2"/>
+
+            <!-- Step 3 -->
+            <include layout="@layout/item_help_step"
+                android:id="@+id/step3"/>
+
+            <!-- Step 4 -->
+            <include layout="@layout/item_help_step"
+                android:id="@+id/step4"/>
+
+            <!-- Step 5 -->
+            <include layout="@layout/item_help_step"
+                android:id="@+id/step5"/>
+
+            <!-- Features section -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="All Features"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#1A1A2E"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="12dp"/>
+
+            <com.google.android.material.card.MaterialCardView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="🗺️  Live GPS route tracking" android:textSize="14sp" android:textColor="#333333" android:layout_marginBottom="10dp"/>
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="📝  Add notes with mood during trip" android:textSize="14sp" android:textColor="#333333" android:layout_marginBottom="10dp"/>
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="📷  Attach photos to trip moments" android:textSize="14sp" android:textColor="#333333" android:layout_marginBottom="10dp"/>
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="🎤  Record voice notes on the go" android:textSize="14sp" android:textColor="#333333" android:layout_marginBottom="10dp"/>
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="✨  Auto trip highlights when done" android:textSize="14sp" android:textColor="#333333" android:layout_marginBottom="10dp"/>
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="📄  Export beautiful PDF trip story" android:textSize="14sp" android:textColor="#333333" android:layout_marginBottom="10dp"/>
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="🖼️  Photo timeline grid view" android:textSize="14sp" android:textColor="#333333" android:layout_marginBottom="10dp"/>
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="📏  Compare any two trips" android:textSize="14sp" android:textColor="#333333" android:layout_marginBottom="10dp"/>
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="🔥  Weekly travel streak tracker" android:textSize="14sp" android:textColor="#333333" android:layout_marginBottom="10dp"/>
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="📡  Works offline — no internet needed" android:textSize="14sp" android:textColor="#333333"/>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Tips -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pro Tips 💡"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#1A1A2E"
+                android:layout_marginBottom="12dp"/>
+
+            <com.google.android.material.card.MaterialCardView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp"
+                android:layout_marginBottom="24dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="• Swipe left on a trip card to delete it" android:textSize="13sp" android:textColor="#555555" android:layout_marginBottom="8dp"/>
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="• Keep the app open while tracking for best GPS accuracy" android:textSize="13sp" android:textColor="#555555" android:layout_marginBottom="8dp"/>
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="• Add notes at interesting moments — they become your PDF story!" android:textSize="13sp" android:textColor="#555555" android:layout_marginBottom="8dp"/>
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="• GPS works even without internet — map tiles may not load but route is saved" android:textSize="13sp" android:textColor="#555555" android:layout_marginBottom="8dp"/>
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="• Export your PDF after the trip and share with friends!" android:textSize="13sp" android:textColor="#555555"/>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

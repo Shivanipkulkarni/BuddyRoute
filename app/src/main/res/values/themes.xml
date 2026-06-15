@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.BuddyRoute" parent="Theme.MaterialComponents.Light.NoActionBar">
+
+        <!-- Brand colors -->
+        <item name="colorPrimary">@color/brand_green</item>
+        <item name="colorPrimaryDark">@color/brand_green_dark</item>
+        <item name="colorAccent">@color/brand_accent</item>
+
+        <!-- Status bar color -->
+        <item name="android:statusBarColor">@color/brand_green_dark</item>
+
+        <!-- Background -->
+        <item name="android:windowBackground">@color/background</item>
+
+        <!-- Smooth animations between screens -->
+        <item name="android:windowActivityTransitions">true</item>
+        <item name="android:windowEnterTransition">@android:transition/fade</item>
+        <item name="android:windowExitTransition">@android:transition/fade</item>
+
+    </style>
+
+    <!-- Splash screen theme — shown instantly on app open -->
+    <style name="Theme.BuddyRoute.Splash" parent="Theme.BuddyRoute">
+        <item name="android:windowBackground">@drawable/splash_background</item>
+        <item name="android:statusBarColor">@color/brand_green</item>
+    </style>
+
+</resources>
