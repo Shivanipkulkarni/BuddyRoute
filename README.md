@@ -19,5 +19,3 @@ Canvas/PdfDocument • Material Components
 2. Add your own Google Maps API key in `AndroidManifest.xml`
 3. Build and run in Android Studio (min SDK 26)
 
-## Screenshots
-(add your screenshots here)
